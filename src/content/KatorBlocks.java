@@ -119,7 +119,7 @@ public class KatorBlocks {
             /*
             researchCost = with(Items.graphite, 2000, Items.tungsten, 1000, Items.oxide, 10, Items.silicon, 1500);
             */
-            consumeLiquids(LiquidStack.with(KatorLiquids.steam, 48f));
+            consumeLiquids(LiquidStack.with(KatorLiquids.steam, 0.8f));
             size = 3;
             generateEffect = Fx.none;
             liquidCapacity = 96f;
@@ -169,9 +169,9 @@ public class KatorBlocks {
                     }},
                     new DrawHeatOutput()
             );
-            consumeLiquid(Liquids.nitrogen, 0.2f);
+            consumeLiquid(KatorLiquids.acid, 0.2f);
             consumeItem(KatorItems.kateos, 2);
-            outputItems = ItemStack.with(KatorItems.calcite, 2);
+            outputLiquid = new LiquidStack(Liquids.water, 0.4f);
             liquidCapacity = 20f;
             itemCapacity = 20;
             rotateDraw = false;
