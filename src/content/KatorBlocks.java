@@ -187,7 +187,8 @@ public class KatorBlocks {
             ambientSound = Sounds.extractLoop;
             ambientSoundVolume = 0.06f;
             heatRequirement = 6f;
-            outputLiquid = new LiquidStack(KatorLiquids.steam, 96f);
+            consumeLiquid(Liquids.water, 0.4f);
+            outputLiquid = new LiquidStack(KatorLiquids.steam, 1.6f);
 
         }};
 

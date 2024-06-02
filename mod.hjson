@@ -1,11 +1,11 @@
-displayName: "Kator"
+displayName: "Καθογένεσις"
 name:"kator"
-author: "Enless's code, Sprites by Kaptain Doshic and music by Saigo No Nozomi."
+author: "Enless's code, sprites by Doshic and music by Saigo."
 main: "example.ExampleJavaMod"
 description: "WorkInProgress"
 version: 0.0.23 alpha
-minGameVersion: "145"
+minGameVersion: "146"
 java: true
 hidden: false
 hideBrowser: false
-subtitle: "without -ga"
+subtitle: "First Frontier"
