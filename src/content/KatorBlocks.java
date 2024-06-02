@@ -3,12 +3,13 @@ package content;
 import arc.graphics.Color;
 import arc.math.Interp;
 import mindustry.content.Fx;
-import mindustry.content.Items;
 import mindustry.content.Liquids;
+import mindustry.content.StatusEffects;
 import mindustry.entities.bullet.LaserBulletType;
 import mindustry.entities.effect.MultiEffect;
 import mindustry.entities.part.RegionPart;
 import mindustry.gen.Sounds;
+import mindustry.graphics.CacheLayer;
 import mindustry.graphics.Pal;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
@@ -49,7 +50,7 @@ public class KatorBlocks {
             //wall
             nickelwall, nickellargewall,
             //ore
-            orenikel, oreferelit, orekateos, calcitedust
+            orenickel, oreferelit, orekateos, calcitedust, acidfloor
             ;
 
     public static void load() {
@@ -377,7 +378,7 @@ public class KatorBlocks {
 
         //ore
 
-        orenikel = new OreBlock(KatorItems.nickel) {{
+        orenickel = new OreBlock(KatorItems.nickel) {{
             oreDefault = false;
         }};
         oreferelit = new OreBlock(KatorItems.ferelit) {{
@@ -389,6 +390,17 @@ public class KatorBlocks {
         calcitedust = new Floor("calcitedust"){{
             itemDrop = KatorItems.calcite;
             playerUnmineable = true;
+        }};
+        acidfloor = new Floor("acid-floor"){{
+            speedMultiplier = 0.5f;
+            variants = 0;
+            status = StatusEffects.corroded;
+            statusDuration = 90f;
+            liquidDrop = KatorLiquids.acid;
+            isLiquid = true;
+            cacheLayer = CacheLayer.water;
+            albedo = 0.9f;
+            supportsOverlay = true;
         }};
     }
 }
